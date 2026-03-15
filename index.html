@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grupo Atieh — Brand Board</title>
+  <link rel="icon" type="image/png" href="IMG/_00_GrupoAtieh.png" id="dynamicFavicon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green-dark: #0F5C4D;
+      --green-mid: #2E7D69;
+      --brown-light: #8B5E3C;
+      --brown-dark: #5C3A21;
+      --cream: #F7F3ED;
+      --ink: #1f1f1f;
+      --white: #ffffff;
+      --shadow: 0 18px 45px rgba(0,0,0,.12);
+      --radius: 24px;
+      --max: 1220px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(46,125,105,.16), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(139,94,60,.14), transparent 28%),
+        linear-gradient(180deg, #fcfcfb 0%, #f4efe9 100%);
+      line-height: 1.5;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    img, svg {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(12px);
+      background: rgba(247,243,237,.72);
+      border-bottom: 1px solid rgba(15,92,77,.08);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 14px 0;
+    }
+
+    .brand-mini {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      background: white;
+      display: grid;
+      place-items: center;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      padding: 4px;
+      border: 1px solid rgba(0,0,0,.06);
+      flex: 0 0 auto;
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: var(--ink);
+      background: rgba(255,255,255,.8);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      border: 1px solid rgba(0,0,0,.06);
+    }
+
+    .hero {
+      padding: 64px 0 38px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .panel {
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(0,0,0,.06);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-copy {
+      padding: 38px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--green-dark);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    h1, h2, h3, p { margin: 0; }
+
+    h1, h2, .wordmark, .brand-mini span {
+      font-family: 'Newbery Sans Pro', 'Times New Roman', serif;
+    }
+
+    h3, .sub, .menu a, .btn, body, p, small, span, .type-label, .type-sample p {
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    }
+
+    h1 {
+      font-size: clamp(36px, 6vw, 64px);
+      line-height: .95;
+      margin-bottom: 16px;
+    }
+
+    .hero-copy p {
+      max-width: 62ch;
+      font-size: 17px;
+      color: rgba(31,31,31,.78);
+    }
+
+    .hero-actions {
+      margin-top: 26px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      appearance: none;
+      border: none;
+      cursor: pointer;
+      border-radius: 999px;
+      padding: 14px 18px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: var(--green-dark);
+      color: white;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--ink);
+      border: 1px solid rgba(0,0,0,.08);
+    }
+
+    .hero-card {
+      padding: 26px;
+      display: grid;
+      place-items: center;
+      background:
+        linear-gradient(160deg, rgba(255,255,255,.94), rgba(247,243,237,.88)),
+        linear-gradient(135deg, rgba(46,125,105,.12), rgba(139,94,60,.12));
+    }
+
+    .logo-box {
+      width: 100%;
+      min-height: 420px;
+      border-radius: 22px;
+      padding: 28px;
+      display: grid;
+      place-items: center;
+      background: var(--cream);
+      border: 1px solid rgba(0,0,0,.06);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo-box img {
+      max-width: min(92%, 420px);
+      max-height: 320px;
+      object-fit: contain;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo-watermark {
+      position: absolute;
+      inset: auto -20px -32px auto;
+      font-size: 180px;
+      font-weight: 900;
+      color: rgba(15,92,77,.05);
+      letter-spacing: -.08em;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .section {
+      padding: 56px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1;
+    }
+
+    .section-head p {
+      max-width: 58ch;
+      color: rgba(31,31,31,.72);
+    }
+
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .swatch {
+      min-height: 220px;
+      border-radius: 26px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      position: relative;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0,0,0,.06);
+      transition: transform .25s ease, box-shadow .25s ease;
+      cursor: pointer;
+    }
+
+    .swatch:hover { transform: translateY(-6px); }
+
+    .swatch-info {
+      background: linear-gradient(180deg, transparent, rgba(0,0,0,.18));
+      padding: 18px;
+      color: white;
+    }
+
+    .swatch small {
+      display: block;
+      opacity: .85;
+      margin-bottom: 6px;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .swatch strong {
+      font-size: 24px;
+      display: block;
+    }
+
+    .swatch button {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      border: none;
+      background: rgba(255,255,255,.88);
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .usage-grid,
+    .logo-grid,
+    .type-grid,
+    .insight-grid,
+    .gradient-grid,
+    .mockup-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .usage-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .logo-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .type-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .insight-grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); }
+    .gradient-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .mockup-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .card {
+      padding: 24px;
+      border-radius: 24px;
+      background: rgba(255,255,255,.76);
+      border: 1px solid rgba(0,0,0,.06);
+      box-shadow: var(--shadow);
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .usage-chip {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: white;
+    }
+
+    .logo-card {
+      padding: 18px;
+      border-radius: 24px;
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,.06);
+      box-shadow: var(--shadow);
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .logo-stage {
+      min-height: 220px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      padding: 18px;
+      border: 1px solid rgba(0,0,0,.05);
+      overflow: hidden;
+    }
+
+    .logo-replaceable {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+    }
+
+    .logo-replaceable img {
+      max-width: 100%;
+      max-height: 180px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .logo-meta {
+      margin-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .logo-meta span:last-child {
+      font-size: 12px;
+      font-weight: 700;
+      color: rgba(31,31,31,.54);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .gradient-card {
+      min-height: 260px;
+      border-radius: 24px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0,0,0,.06);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gradient-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent, rgba(0,0,0,.18));
+    }
+
+    .gradient-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .gradient-title {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .gradient-code {
+      font-size: 13px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      opacity: .95;
+    }
+
+    .mockup-card {
+      border-radius: 24px;
+      background: rgba(255,255,255,.78);
+      border: 1px solid rgba(0,0,0,.06);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mockup-stage {
+      min-height: 280px;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: linear-gradient(135deg, rgba(247,243,237,1), rgba(230,224,215,.9));
+      border-bottom: 1px solid rgba(0,0,0,.06);
+      overflow: hidden;
+    }
+
+    .mockup-info {
+      padding: 20px;
+    }
+
+    .mockup-badge {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      background: rgba(15,92,77,.1);
+      color: var(--green-dark);
+    }
+
+    .mockup-box {
+      width: 100%;
+      max-width: 360px;
+      border-radius: 22px;
+      box-shadow: 0 20px 40px rgba(0,0,0,.12);
+      overflow: hidden;
+      background: white;
+      min-width: 0;
+    }
+
+    .mockup-header {
+      padding: 14px 18px;
+      color: white;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    .mockup-body {
+      padding: 0;
+      display: grid;
+      place-items: center;
+      min-height: 180px;
+      text-align: center;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .mockup-body img {
+      width: 100%;
+      height: 100%;
+      min-height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .type-sample {
+      border-radius: 22px;
+      padding: 26px;
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow);
+    }
+
+    .newbery {
+      background: linear-gradient(135deg, var(--brown-light), var(--brown-dark));
+      color: white;
+    }
+
+    .montserrat {
+      background: linear-gradient(135deg, var(--green-mid), var(--green-dark));
+      color: white;
+    }
+
+    .type-label {
+      font-size: 12px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      opacity: .85;
+      font-weight: 700;
+    }
+
+    .type-word {
+      font-size: clamp(36px, 6vw, 62px);
+      font-weight: 900;
+      letter-spacing: .02em;
+      line-height: .95;
+    }
+
+    .note-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .note {
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(247,243,237,.9);
+      border-left: 6px solid var(--green-mid);
+    }
+
+    .insight-highlight {
+      background: linear-gradient(135deg, rgba(15,92,77,.96), rgba(46,125,105,.92));
+      color: white;
+      padding: 28px;
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+      min-height: 100%;
+    }
+
+    .insight-highlight p {
+      color: rgba(255,255,255,.82);
+      margin-top: 12px;
+    }
+
+    .footer {
+      padding: 34px 0 50px;
+      color: rgba(31,31,31,.68);
+      font-size: 14px;
+    }
+
+    .mock-logo {
+      width: min(92%, 420px);
+      color: currentColor;
+      min-width: 0;
+    }
+
+    .mock-logo svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .mock-logo .wordmark {
+      margin-top: 10px;
+      text-align: center;
+      font-weight: 900;
+      letter-spacing: .04em;
+      font-size: clamp(20px, 3vw, 42px);
+      line-height: 1;
+      font-family: 'Newbery Sans Pro', 'Times New Roman', serif;
+      word-break: break-word;
+    }
+
+    .mock-logo .sub {
+      text-align: center;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: clamp(8px, 1vw, 12px);
+      margin-top: 6px;
+      opacity: .9;
+      line-height: 1.35;
+      word-break: break-word;
+    }
+
+    .legend {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.76);
+      border: 1px solid rgba(0,0,0,.06);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      display: inline-block;
+    }
+
+    .toast {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      background: var(--ink);
+      color: white;
+      padding: 12px 16px;
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+      transition: .25s ease;
+      z-index: 30;
+      font-size: 14px;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .insight-grid,
+      .type-grid,
+      .usage-grid,
+      .palette-grid,
+      .logo-grid,
+      .gradient-grid,
+      .mockup-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero-copy,
+      .hero-card,
+      .card,
+      .logo-card,
+      .mockup-info {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero { padding-top: 42px; }
+
+      .hero-grid,
+      .insight-grid,
+      .type-grid,
+      .usage-grid,
+      .palette-grid,
+      .logo-grid,
+      .gradient-grid,
+      .mockup-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy,
+      .card,
+      .hero-card,
+      .logo-card,
+      .mockup-info,
+      .type-sample {
+        padding: 20px;
+      }
+
+      .section {
+        padding: 42px 0;
+      }
+
+      .section-head {
+        align-items: start;
+      }
+
+      .section-head p {
+        max-width: 100%;
+      }
+
+      .menu {
+        display: none;
+      }
+
+      .logo-box {
+        min-height: 300px;
+        padding: 20px;
+      }
+
+      .logo-watermark {
+        font-size: 120px;
+        inset: auto -10px -16px auto;
+      }
+
+      .swatch {
+        min-height: 180px;
+      }
+
+      .mockup-stage {
+        min-height: 220px;
+        padding: 18px;
+      }
+
+      .mockup-body {
+        min-height: 140px;
+        padding: 20px 16px;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        width: min(var(--max), calc(100% - 20px));
+      }
+
+      .nav {
+        padding: 10px 0;
+      }
+
+      .brand-mini {
+        gap: 10px;
+        font-size: 14px;
+      }
+
+      .brand-mark {
+        width: 34px;
+        height: 34px;
+        border-radius: 12px;
+      }
+
+      h1 {
+        line-height: 1.02;
+      }
+
+      .hero-copy p,
+      .section-head p,
+      .card p,
+      .mockup-info p,
+      .type-sample p {
+        font-size: 15px;
+      }
+    }
+    }
+
+    @media (max-width: 720px) {
+      .hero { padding-top: 42px; }
+      .hero-grid,
+      .insight-grid,
+      .type-grid,
+      .usage-grid,
+      .palette-grid,
+      .logo-grid,
+      .gradient-grid,
+      .mockup-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-copy,
+      .card,
+      .hero-card { padding: 22px; }
+      .menu { display: none; }
+      .logo-box { min-height: 320px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand-mini">
+        <div class="brand-mark"><img src="IMG/icon.png" alt="Icono Grupo Atieh" /></div>
+        <span>Grupo Atieh Brand Board</span>
+      </div>
+      <nav class="menu">
+        <a href="#paleta">Paleta</a>
+        <a href="#logos">Logos</a>
+        <a href="#usos">Usos</a>
+        <a href="#degradados">Degradados</a>
+        <a href="#tipografias">Tipografías</a>
+        <a href="#mockups">Mockups</a>
+        <a href="#concepto">Concepto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="panel hero-copy">
+          <div class="eyebrow">Identidad visual • Grupo Atieh</div>
+          <h1>Un micrositio para presentar la marca con claridad.</h1>
+          <p>
+            Esta web resume las variantes cromáticas del logotipo, la paleta oficial,
+            los usos sugeridos de cada color y la lógica visual detrás de la marca.
+            Está basada en tu brand board: colores oficiales, tipografías y argumentos
+            de posicionamiento de la identidad.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://drive.google.com/drive/folders/14TnJ3XCkCf13IS9VBt3Eko1-ZFT-PgHc?usp=sharing" target="_blank" rel="noopener noreferrer">📁 Descargar archivos en Drive</a>
+            <a class="btn btn-secondary" href="#logos">Ver versiones del logo</a>
+            <a class="btn btn-secondary" href="#paleta">Explorar colores</a>
+          </div>
+        </div>
+
+        <div class="panel hero-card">
+          <div class="logo-box">
+            <div class="mock-logo" id="heroLogo" style="color: var(--green-dark)"></div>
+            <div class="logo-watermark">GA</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="paleta">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Paleta oficial</div>
+            <h2>Colores de marca</h2>
+          </div>
+          <p>
+            Los cinco tonos principales del sistema visual: dos verdes, dos marrones y un crema.
+            Haz clic en cualquier tarjeta para copiar el código HEX.
+          </p>
+        </div>
+
+        <div class="palette-grid" id="paletteGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="logos">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Variantes cromáticas</div>
+            <h2>Versiones del logotipo</h2>
+          </div>
+          <p>
+            Estas versiones muestran cómo se comporta la marca en fondos claros y oscuros, manteniendo lectura, contraste y elegancia. Los archivos están conectados para usarse desde la carpeta local <strong>IMG</strong> del proyecto.
+          </p>
+        </div>
+
+        <div class="logo-grid" id="logoGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="usos">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Uso estratégico</div>
+            <h2>Qué comunica cada color</h2>
+          </div>
+          <p>
+            Con base en la identidad visual de la marca: bienestar, patrimonio, confianza, tranquilidad, crecimiento, formalidad y cercanía.
+          </p>
+        </div>
+
+        <div class="usage-grid">
+          <article class="card">
+            <span class="usage-chip" style="background: var(--green-dark)">Verde oscuro</span>
+            <h3>Color principal de identidad</h3>
+            <p>
+              Ideal para logo principal, encabezados, botones, piezas institucionales y soportes donde la marca debe verse sólida, estable y profesional.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="usage-chip" style="background: var(--green-mid)">Verde medio</span>
+            <h3>Color de apoyo y cercanía</h3>
+            <p>
+              Funciona muy bien para fondos secundarios, bloques informativos, secciones de contenido y piezas más amables o contemporáneas.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="usage-chip" style="background: var(--brown-light)">Marrón claro</span>
+            <h3>Elegancia y patrimonio</h3>
+            <p>
+              Recomendado para aplicaciones premium, acentos, mockups corporativos, papelería y recursos donde quieras elevar percepción de valor.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="usage-chip" style="background: var(--brown-dark)">Marrón oscuro</span>
+            <h3>Formalidad y peso visual</h3>
+            <p>
+              Úsalo cuando busques una lectura más sobria y de mayor autoridad: firmas, sellos, encabezados oscuros o materiales ejecutivos.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="usage-chip" style="background: var(--cream); color: var(--ink); border: 1px solid rgba(0,0,0,.08)">Crema</span>
+            <h3>Base neutra y elegante</h3>
+            <p>
+              Excelente como fondo general del sistema. Aporta limpieza, suavidad y deja que el verde y los marrones respiren sin competir.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="usage-chip" style="background: var(--ink)">Negro y blanco</span>
+            <h3>Versatilidad total</h3>
+            <p>
+              Versiones clave para uniformes, sellos, impresión económica, aplicaciones monocromas y contextos donde la legibilidad manda por encima del color.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="degradados">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Recursos visuales</div>
+            <h2>Degradados sugeridos</h2>
+          </div>
+          <p>
+            Estos degradados ayudan a extender la identidad visual de la marca en presentaciones, fondos, piezas digitales y mockups sin salirte del lenguaje cromático principal.
+          </p>
+        </div>
+
+        <div class="gradient-grid">
+          <article class="gradient-card" style="background: linear-gradient(135deg, var(--green-dark), var(--green-mid));">
+            <div class="gradient-title">Verde institucional</div>
+            <div class="gradient-code">0F5C4D → 2E7D69</div>
+          </article>
+
+          <article class="gradient-card" style="background: linear-gradient(135deg, var(--brown-light), var(--brown-dark));">
+            <div class="gradient-title">Marrón patrimonial</div>
+            <div class="gradient-code">8B5E3C → 5C3A21</div>
+          </article>
+
+          <article class="gradient-card" style="background: linear-gradient(135deg, var(--green-dark), var(--brown-light));">
+            <div class="gradient-title">Corporativo premium</div>
+            <div class="gradient-code">0F5C4D → 8B5E3C</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tipografias">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Sistema tipográfico</div>
+            <h2>Tipografías</h2>
+          </div>
+          <p>
+            El board menciona dos familias: Newbery Sans Pro para una sensación más elegante y sofisticada, y Montserrat para limpieza, modernidad y legibilidad.
+          </p>
+        </div>
+
+        <div class="type-grid">
+          <div class="type-sample newbery">
+            <div>
+              <div class="type-label">Tipografía de carácter</div>
+              <div class="type-word">NEWBERY<br>SANS PRO</div>
+            </div>
+            <p>Úsala en titulares selectos, frases de marca y piezas donde quieras una sensación más distinguida.</p>
+          </div>
+
+          <div class="type-sample montserrat">
+            <div>
+              <div class="type-label">Tipografía funcional</div>
+              <div class="type-word">Montserrat</div>
+            </div>
+            <p>Ideal para cuerpos de texto, interfaces, subtítulos, botones y contenido con prioridad de lectura.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="concepto">
+      <div class="container insight-grid">
+        <div class="insight-highlight">
+
+<img src="IMG/_05_GrupoAtieh_Crema_F7F3ED.png" alt="Versión crema Grupo Atieh">
+
+          <div class="eyebrow" style="color: rgba(255,255,255,.9)">Concepto de marca</div>
+          <h2>Una identidad que mezcla hogar, confianza y posicionamiento profesional.</h2>
+          <p>
+            Con base en el brand board, el símbolo conecta el sector inmobiliario o de construcción con ideas de hogar, propiedades, estabilidad y recordación. La integración entre nombre y símbolo hace que la marca sea más distintiva y fácil de reconocer.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Cómo se ve y qué transmite la marca</h3>
+          <div class="note-list">
+            <div class="note"><strong>Qué representa:</strong> el símbolo visual conecta con hogar, estructura, inversión y confianza.</div>
+            <div class="note"><strong>Qué sensación deja:</strong> la marca se percibe elegante, estable, cercana y profesional.</div>
+            <div class="note"><strong>Dónde funciona mejor:</strong> en papelería, presentaciones, redes, señalización, uniformes y piezas corporativas.</div>
+            <div class="note"><strong>Qué logra visualmente:</strong> una identidad clara, memorable y adaptable a distintos formatos.</div>
+          </div>
+            <div class="note"><strong>Tono:</strong> cercano, elegante, confiable y formal.</div>
+            <div class="note"><strong>Versatilidad:</strong> funciona en fondos claros, oscuros, uniformes, letreros y material promocional.</div>
+            <div class="note"><strong>Objetivo:</strong> proyectar una marca bien posicionada y profesional.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+      <section class="section" id="mockups">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Aplicaciones visuales</div>
+            <h2>Mockups sugeridos</h2>
+          </div>
+          <p>
+            Estos espacios están listos para que presentes ejemplos de aplicación de la marca en distintos soportes visuales frente al cliente.
+          </p>
+        </div>
+
+        <div class="mockup-grid">
+          <article class="mockup-card">
+            <div class="mockup-stage">
+              <div class="mockup-box">
+                <div class="mockup-header" style="background: linear-gradient(135deg, var(--green-dark), var(--green-mid));">Papelería corporativa</div>
+                <div class="mockup-body" data-mockup-slot="mockup-1"><img src="IMG/mockup_1.jpg" alt="Mockup 1 Grupo Atieh" /></div>
+              </div>
+            </div>
+            <div class="mockup-info">
+              <span class="mockup-badge">Mockup 01</span>
+              <h3>Tarjeta y hoja membretada</h3>
+              <p>Espacio ideal para mostrar aplicaciones sobrias y profesionales del logotipo en piezas corporativas.</p>
+            </div>
+          </article>
+
+          <article class="mockup-card">
+            <div class="mockup-stage">
+              <div class="mockup-box">
+                <div class="mockup-header" style="background: linear-gradient(135deg, var(--brown-light), var(--brown-dark));">Señalización</div>
+                <div class="mockup-body" data-mockup-slot="mockup-2"><img src="IMG/mockup_2.jpg" alt="Mockup 2 Grupo Atieh" /></div>
+              </div>
+            </div>
+            <div class="mockup-info">
+              <span class="mockup-badge">Mockup 02</span>
+              <h3>Fachada o letrero exterior</h3>
+              <p>Úsalo para enseñar cómo se vería la identidad en un entorno físico con presencia y visibilidad.</p>
+            </div>
+          </article>
+
+          <article class="mockup-card">
+            <div class="mockup-stage">
+              <div class="mockup-box">
+                <div class="mockup-header" style="background: linear-gradient(135deg, var(--green-dark), var(--brown-light));">Redes sociales</div>
+                <div class="mockup-body" data-mockup-slot="mockup-3"><img src="IMG/mockup_3.jpg" alt="Mockup 3 Grupo Atieh" /></div>
+              </div>
+            </div>
+            <div class="mockup-info">
+              <span class="mockup-badge">Mockup 03</span>
+              <h3>Post o portada digital</h3>
+              <p>Perfecto para presentar la marca en formatos pensados para Instagram, anuncios o contenido institucional.</p>
+            </div>
+          </article>
+
+          <article class="mockup-card">
+            <div class="mockup-stage">
+              <div class="mockup-box">
+                <div class="mockup-header" style="background: linear-gradient(135deg, var(--brown-dark), var(--green-dark));">Uniformes y material promocional</div>
+                <div class="mockup-body" data-mockup-slot="mockup-4"><img src="IMG/mockup_4.jpg" alt="Mockup 4 Grupo Atieh" /></div>
+              </div>
+            </div>
+            <div class="mockup-info">
+              <span class="mockup-badge">Mockup 04</span>
+              <h3>Franelas, carpetas o merchandising</h3>
+              <p>Sirve para visualizar cómo la identidad puede mantenerse consistente en soportes promocionales.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      Este logo fue diseñado por Carlos Gasia L (c) 2026.
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">Código copiado</div>
+
+  <script>
+    const palette = [
+      {
+        name: 'Verde oscuro',
+        hex: '0F5C4D',
+        value: '#0F5C4D',
+        text: '#ffffff'
+      },
+      {
+        name: 'Verde medio',
+        hex: '2E7D69',
+        value: '#2E7D69',
+        text: '#ffffff'
+      },
+      {
+        name: 'Marrón claro',
+        hex: '8B5E3C',
+        value: '#8B5E3C',
+        text: '#ffffff'
+      },
+      {
+        name: 'Marrón oscuro',
+        hex: '5C3A21',
+        value: '#5C3A21',
+        text: '#ffffff'
+      },
+      {
+        name: 'Crema',
+        hex: 'F7F3ED',
+        value: '#F7F3ED',
+        text: '#1f1f1f'
+      }
+    ];
+
+    const logoVariants = [
+      { name: 'Principal verde', color: '#0F5C4D', bg: '#F7F3ED', tag: 'Principal', img: 'IMG/_01_GrupoAtieh_VerdeOscuro_0F5C4D.png' },
+      { name: 'Apoyo verde medio', color: '#2E7D69', bg: '#F7F3ED', tag: 'Secundario', img: 'IMG/_02_GrupoAtieh_VerdeMedio_2E7D69.png' },
+      { name: 'Premium marrón claro', color: '#8B5E3C', bg: '#F7F3ED', tag: 'Premium', img: 'IMG/_03_GrupoAtieh_MarronClaro_8B5E3C.png' },
+      { name: 'Ejecutivo marrón oscuro', color: '#5C3A21', bg: '#F7F3ED', tag: 'Formal', img: 'IMG/_04_GrupoAtieh_MarronOscuro_5C3A21.png' },
+      { name: 'Versión crema', color: '#F7F3ED', bg: '#d9d1c8', tag: 'Suave', img: 'IMG/_05_GrupoAtieh_Crema_F7F3ED.png' },
+      { name: 'Inverso blanco', color: '#F7F3ED', bg: '#2E7D69', tag: 'Fondos oscuros', img: 'IMG/_06_GrupoAtieh_Blanco.png' },
+      { name: 'Monocromático negro', color: '#000000', bg: '#ffffff', tag: 'Impresión', img: 'IMG/_07_GrupoAtieh_Negro.png' },
+      { name: 'Logo institucional', color: '#0F5C4D', bg: '#ffffff', tag: 'Corporativo', img: 'IMG/_00_GrupoAtieh.png' }
+    ];
+
+    function logoSVG(color) {
+      return `
+        <div class="mock-logo" style="color:${color}">
+          <svg viewBox="0 0 420 300" aria-hidden="true">
+            <g fill="currentColor">
+              <path d="M80 55 122 28 150 55 150 144 118 128 118 78 80 102Z"></path>
+              <path d="M150 55 200 33 228 68 228 104 150 148Z"></path>
+              <path d="M80 146 118 115 118 176 196 146 286 178 286 230 80 230Z"></path>
+              <path d="M260 52 302 108 302 230 268 230 268 94Z"></path>
+              <path d="M305 190 343 230 321 230 304 206 286 230 260 230 294 160Z"></path>
+              <rect x="88" y="48" width="58" height="8" rx="4"></rect>
+              <rect x="88" y="66" width="58" height="8" rx="4"></rect>
+              <rect x="88" y="84" width="58" height="8" rx="4"></rect>
+              <rect x="88" y="102" width="58" height="8" rx="4"></rect>
+              <rect x="88" y="120" width="58" height="8" rx="4"></rect>
+              <rect x="108" y="158" width="128" height="8" rx="4"></rect>
+              <rect x="108" y="176" width="146" height="8" rx="4"></rect>
+              <rect x="108" y="194" width="156" height="8" rx="4"></rect>
+              <rect x="108" y="212" width="156" height="8" rx="4"></rect>
+            </g>
+          </svg>
+          <div class="wordmark">GRUPO ATIEH</div>
+          <div class="sub">REAL ESTATE · LEGAL SERVICES · TOURISM</div>
+        </div>
+      `;
+    }
+
+    const paletteGrid = document.getElementById('paletteGrid');
+    const logoGrid = document.getElementById('logoGrid');
+    const heroLogo = document.getElementById('heroLogo');
+    const toast = document.getElementById('toast');
+
+    heroLogo.innerHTML = `<img src="IMG/_00_GrupoAtieh.png" alt="Grupo Atieh logo principal" />`;
+
+    function showToast(text) {
+      toast.textContent = text;
+      toast.classList.add('show');
+      clearTimeout(showToast.timer);
+      showToast.timer = setTimeout(() => toast.classList.remove('show'), 1800);
+    }
+
+    async function copyHex(hex) {
+      try {
+        await navigator.clipboard.writeText(hex);
+        showToast(`Copiado: ${hex}`);
+      } catch {
+        showToast(`No se pudo copiar: ${hex}`);
+      }
+    }
+
+    palette.forEach(item => {
+      const card = document.createElement('article');
+      card.className = 'swatch';
+      card.style.background = item.value;
+      card.style.color = item.text;
+      card.innerHTML = `
+        <button type="button">Copiar</button>
+        <div class="swatch-info">
+          <small>${item.name}</small>
+          <strong>${item.hex}</strong>
+        </div>
+      `;
+      card.addEventListener('click', () => copyHex(item.hex));
+      paletteGrid.appendChild(card);
+    });
+
+    logoVariants.forEach((variant, index) => {
+      const card = document.createElement('article');
+      card.className = 'logo-card';
+      card.dataset.assetSlot = `logo-${index + 1}`;
+      card.innerHTML = `
+        <div class="logo-stage" style="background:${variant.bg}; color:${variant.color}">
+          <div class="logo-replaceable" data-slot="logo-${index + 1}">
+            <img src="${variant.img}" alt="${variant.name} Grupo Atieh" />
+          </div>
+        </div>
+        <div class="logo-meta">
+          <span><strong>${variant.name}</strong></span>
+          <span>${variant.tag}</span>
+        </div>
+      `;
+      logoGrid.appendChild(card);
+    });
+
+    
+  </script>
+</body>
+</html>
